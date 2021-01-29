@@ -6,6 +6,7 @@ import * as util from "./package-name-util";
 import tryResolve from "try-resolve";
 
 const SPECIAL_PACKAGE_NAME = [
+    "highlight", // → @honkit/honkit-plugin-highlight
     "theme-default", // → @honkit/honkit-plugin-theme-default
 ];
 
@@ -23,10 +24,10 @@ const SPECIAL_PACKAGE_NAME = [
  * - gitbook-plugin-*
  */
 
-class PluginResolver {
-    baseDirectory: any;
+export class PluginResolver {
+    baseDirectory: string;
 
-    constructor(config) {
+    constructor(config: { baseDirectory?: string } = {}) {
         /**
          * @type {string} baseDirectory for resolving
          */
@@ -64,5 +65,3 @@ baseDir: ${baseDir}
         return pkgPath.substring(0, pkgPath.length - "/package.json".length);
     }
 }
-
-exports.PluginResolver = PluginResolver;

@@ -7,8 +7,8 @@ import replaceShortcuts from "./replaceShortcuts";
  * Render a template
  *
  * @param {TemplateEngine} engine
- * @param {String} filePath: absolute path for the loader
- * @param {String} content
+ * @param {string} filePath: absolute path for the loader
+ * @param {string} content
  * @param {Object} context (optional)
  * @return {Promise<TemplateOutput>}
  */
@@ -31,7 +31,6 @@ function renderTemplate(engine, filePath, content, context) {
             path: filePath,
         })
             .then((content) => {
-                // @ts-expect-error ts-migrate(2339) FIXME: Property 'create' does not exist on type 'Class'.
                 return TemplateOutput.create(content, blocks);
             })
             .catch((error) => {

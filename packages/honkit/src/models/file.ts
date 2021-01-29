@@ -1,96 +1,90 @@
+import fs from "fs";
 import path from "path";
 import Immutable from "immutable";
 import parsers from "../parsers";
+import Parser from "./parser";
 
-const File = Immutable.Record({
+class File extends Immutable.Record({
     // Path of the file, relative to the FS
     path: String(),
 
     // Time when file data last modified
     mtime: Date(),
-});
-
-File.prototype.getPath = function () {
-    return this.get("path");
-};
-
-File.prototype.getMTime = function () {
-    return this.get("mtime");
-};
-
-/**
- Does the file exists / is set
-
- @return {Boolean}
- */
-
-File.prototype.exists = function () {
-    return Boolean(this.getPath());
-};
-
-/**
- Return type of file ('markdown' or 'asciidoc')
-
- @return {String}
- */
-
-File.prototype.getType = function () {
-    const parser = this.getParser();
-    if (parser) {
-        return parser.getName();
-    } else {
-        return undefined;
+}) {
+    getPath(): string {
+        return this.get("path");
     }
-};
 
-/**
- Return extension of this file (lowercased)
+    getMTime(): Date {
+        return this.get("mtime");
+    }
 
- @return {String}
- */
+    /**
+     Does the file exists / is set
 
-File.prototype.getExtension = function () {
-    return path.extname(this.getPath()).toLowerCase();
-};
+     @return {boolean}
+     */
 
-/**
- Return parser for this file
+    exists(): boolean {
+        return Boolean(this.getPath());
+    }
 
- @return {Parser}
- */
+    /**
+     Return type of file ('markdown' or 'asciidoc')
 
-File.prototype.getParser = function () {
-    return parsers.getByExt(this.getExtension());
-};
+     @return {string}
+     */
+    getType(): string {
+        const parser = this.getParser();
+        if (parser) {
+            return parser.getName();
+        } else {
+            return undefined;
+        }
+    }
 
-/**
- Create a file from stats informations
+    /**
+     Return extension of this file (lowercased)
 
- @param {String} filepath
- @param {Object|fs.Stats} stat
- @return {File}
- */
+     @return {string}
+     */
+    getExtension(): string {
+        return path.extname(this.getPath()).toLowerCase();
+    }
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'createFromStat' does not exist on type '... Remove this comment to see the full error message
-File.createFromStat = function createFromStat(filepath, stat) {
-    return new File({
-        path: filepath,
-        mtime: stat.mtime,
-    });
-};
+    /**
+     Return parser for this file
 
-/**
- Create a file with only a path
+     @return {Parser}
+     */
+    getParser(): Parser {
+        return parsers.getByExt(this.getExtension());
+    }
 
- @param {String} filepath
- @return {File}
- */
+    /**
+     Create a file from stats informations
 
-// @ts-expect-error ts-migrate(2339) FIXME: Property 'createWithFilepath' does not exist on ty... Remove this comment to see the full error message
-File.createWithFilepath = function createWithFilepath(filepath) {
-    return new File({
-        path: filepath,
-    });
-};
+     @param {string} filepath
+     @param {Object|fs.Stats} stat
+     @return {File}
+     */
+    static createFromStat(filepath: string, stat: fs.Stats): File {
+        return new File({
+            path: filepath,
+            mtime: stat.mtime,
+        });
+    }
+
+    /**
+     Create a file with only a path
+     @param {string} filepath
+     @return {File}
+     */
+    static createWithFilepath(filepath: string): File {
+        return new File({
+            path: filepath,
+        });
+    }
+}
 
 export default File;

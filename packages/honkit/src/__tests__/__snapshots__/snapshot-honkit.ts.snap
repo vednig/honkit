@@ -7,7 +7,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Configuration · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -72,7 +71,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -593,6 +592,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -847,6 +866,50 @@ These files must be at the root of your book (or the root of every language book
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -892,7 +955,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>eBook and PDF · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -957,7 +1019,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -1478,6 +1540,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -1607,6 +1689,50 @@ $ honkit mobi ./ ./mybook.mobi
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -1645,6 +1771,822 @@ $ honkit mobi ./ ./mybook.mobi
 }
 `;
 
+exports[`HonKit snapshots: encoding.html 1`] = `
+Object {
+  "contents": "
+<!DOCTYPE HTML>
+<html lang=\\"\\" >
+    <head>
+        <meta charset=\\"UTF-8\\">
+        <title>Encoding · HonKit Documentation</title>
+        <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
+        <meta name=\\"description\\" content=\\"\\">
+        
+        
+        
+        
+    
+    <link rel=\\"stylesheet\\" href=\\"gitbook/style.css\\">
+
+    
+            
+                
+                <link rel=\\"stylesheet\\" href=\\"gitbook/gitbook-plugin-highlight/website.css\\">
+                
+            
+                
+                <link rel=\\"stylesheet\\" href=\\"gitbook/gitbook-plugin-search/search.css\\">
+                
+            
+                
+                <link rel=\\"stylesheet\\" href=\\"gitbook/gitbook-plugin-fontsettings/website.css\\">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel=\\"stylesheet\\" href=\\"styles/website.css\\">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name=\\"HandheldFriendly\\" content=\\"true\\"/>
+    <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1, user-scalable=no\\">
+    <meta name=\\"apple-mobile-web-app-capable\\" content=\\"yes\\">
+    <meta name=\\"apple-mobile-web-app-status-bar-style\\" content=\\"black\\">
+    <link rel=\\"apple-touch-icon-precomposed\\" sizes=\\"152x152\\" href=\\"gitbook/images/apple-touch-icon-precomposed-152.png\\">
+    <link rel=\\"shortcut icon\\" href=\\"gitbook/images/favicon.ico\\" type=\\"image/x-icon\\">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class=\\"book honkit-cloak\\">
+    <div class=\\"book-summary\\">
+        
+            
+<div id=\\"book-search-input\\" role=\\"search\\">
+    <input type=\\"text\\" placeholder=\\"Type to search\\" />
+</div>
+
+            
+                <nav role=\\"navigation\\">
+                
+
+
+<ul class=\\"summary\\">
+    
+    
+
+    
+
+    
+        
+        <li class=\\"header\\">Getting Started</li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"1.1\\" data-path=\\"./\\">
+            
+                <a href=\\"./\\">
+            
+                    
+                    About this documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"1.2\\" data-path=\\"setup.html\\">
+            
+                <a href=\\"setup.html\\">
+            
+                    
+                    Installation and Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class=\\"header\\">Your Content</li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"2.1\\" data-path=\\"structure.html\\">
+            
+                <a href=\\"structure.html\\">
+            
+                    
+                    Directory structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.2\\" data-path=\\"pages.html\\">
+            
+                <a href=\\"pages.html\\">
+            
+                    
+                    Pages and Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.3\\" data-path=\\"config.html\\">
+            
+                <a href=\\"config.html\\">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.4\\" data-path=\\"lexicon.html\\">
+            
+                <a href=\\"lexicon.html\\">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.5\\" data-path=\\"languages.html\\">
+            
+                <a href=\\"languages.html\\">
+            
+                    
+                    Multi-Lingual
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html\\">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+            <ul class=\\"articles\\">
+                
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.1\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#headings\\">
+            
+                    
+                    Headings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.2\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#paragraphs\\">
+            
+                    
+                    Paragraphs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.3\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#lists\\">
+            
+                    
+                    Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.4\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#links\\">
+            
+                    
+                    Links
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.5\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#images\\">
+            
+                    
+                    Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.6\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#blockquotes\\">
+            
+                    
+                    Blockquotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.7\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#tables\\">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.8\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#code\\">
+            
+                    
+                    Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.9\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#html\\">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.6.10\\" data-path=\\"syntax/markdown.html\\">
+            
+                <a href=\\"syntax/markdown.html#footnotes\\">
+            
+                    
+                    Footnotes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.7\\" data-path=\\"syntax/asciidoc.html\\">
+            
+                <a href=\\"syntax/asciidoc.html\\">
+            
+                    
+                    AsciiDoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"2.8\\" data-path=\\"ebook.html\\">
+            
+                <a href=\\"ebook.html\\">
+            
+                    
+                    eBook and PDF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class=\\"header\\">Customization</li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"3.1\\" data-path=\\"templating/\\">
+            
+                <a href=\\"templating/\\">
+            
+                    
+                    Templating
+            
+                </a>
+            
+
+            
+            <ul class=\\"articles\\">
+                
+    
+        <li class=\\"chapter \\" data-level=\\"3.1.1\\" data-path=\\"templating/conrefs.html\\">
+            
+                <a href=\\"templating/conrefs.html\\">
+            
+                    
+                    Content References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.1.2\\" data-path=\\"templating/variables.html\\">
+            
+                <a href=\\"templating/variables.html\\">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.1.3\\" data-path=\\"templating/builtin.html\\">
+            
+                <a href=\\"templating/builtin.html\\">
+            
+                    
+                    Builtin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2\\" data-path=\\"plugins/\\">
+            
+                <a href=\\"plugins/\\">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+            <ul class=\\"articles\\">
+                
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.1\\" data-path=\\"plugins/create.html\\">
+            
+                <a href=\\"plugins/create.html\\">
+            
+                    
+                    Create a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.2\\" data-path=\\"plugins/hooks.html\\">
+            
+                <a href=\\"plugins/hooks.html\\">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.3\\" data-path=\\"plugins/blocks.html\\">
+            
+                <a href=\\"plugins/blocks.html\\">
+            
+                    
+                    Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.4\\" data-path=\\"plugins/filters.html\\">
+            
+                <a href=\\"plugins/filters.html\\">
+            
+                    
+                    Filters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.5\\" data-path=\\"plugins/api.html\\">
+            
+                <a href=\\"plugins/api.html\\">
+            
+                    
+                    API & Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.2.6\\" data-path=\\"plugins/testing.html\\">
+            
+                <a href=\\"plugins/testing.html\\">
+            
+                    
+                    Test your plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"3.3\\" data-path=\\"themes/\\">
+            
+                <a href=\\"themes/\\">
+            
+                    
+                    Theming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"4.1\\" data-path=\\"faq.html\\">
+            
+                <a href=\\"faq.html\\">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"4.2\\" data-path=\\"examples.md\\">
+            
+                <span>
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class=\\"chapter \\" data-level=\\"4.3\\" >
+            
+                <a target=\\"_blank\\" href=\\"https://github.com/honkit/honkit/blob/master/CHANGELOG.md\\">
+            
+                    
+                    Release notes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter active\\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class=\\"divider\\"></li>
+
+    <li>
+        <a href=\\"https://github.com/honkit/honkit\\" target=\\"blank\\" class=\\"gitbook-link\\">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class=\\"book-body\\">
+        
+            <div class=\\"body-inner\\">
+                
+                    
+
+<div class=\\"book-header\\" role=\\"navigation\\">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class=\\"fa fa-circle-o-notch fa-spin\\"></i>
+        <a href=\\".\\" >Encoding</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class=\\"page-wrapper\\" tabindex=\\"-1\\" role=\\"main\\">
+                        <div class=\\"page-inner\\">
+                            
+<div id=\\"book-search-results\\">
+    <div class=\\"search-noresults\\">
+    
+                                <section class=\\"normal markdown-section\\">
+                                
+
+                                <h1 id=\\"encoding\\">Encoding</h1>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Japanese</td>
+<td>こんにちは</td>
+</tr>
+<tr>
+<td>Chinese(Simplified)</td>
+<td>你好</td>
+</tr>
+<tr>
+<td>Portuguese</td>
+<td>olá</td>
+</tr>
+<tr>
+<td>Russian</td>
+<td>приветствие</td>
+</tr>
+<tr>
+<td>Korean</td>
+<td>안녕하세요</td>
+</tr>
+<tr>
+<td>Emoji (<code>u+1f91d</code>)</td>
+<td>🤝</td>
+</tr>
+</tbody>
+</table>
+
+                                
+<hr>
+<div class=\\"btn-group btn-group-justified\\">
+    
+    
+</div>
+
+                                </section>
+                            
+    </div>
+    <div class=\\"search-results\\">
+        <div class=\\"has-results\\">
+            
+            <h1 class=\\"search-results-title\\"><span class='search-results-count'></span> results matching \\"<span class='search-query'></span>\\"</h1>
+            <ul class=\\"search-results-list\\"></ul>
+            
+        </div>
+        <div class=\\"no-results\\">
+            
+            <h1 class=\\"search-results-title\\">No results matching \\"<span class='search-query'></span>\\"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
+    <script src=\\"gitbook/gitbook.js\\"></script>
+    <script src=\\"gitbook/theme.js\\"></script>
+    
+        
+        <script src=\\"gitbook/gitbook-plugin-search/search-engine.js\\"></script>
+        
+    
+        
+        <script src=\\"gitbook/gitbook-plugin-search/search.js\\"></script>
+        
+    
+        
+        <script src=\\"gitbook/gitbook-plugin-lunr/lunr.min.js\\"></script>
+        
+    
+        
+        <script src=\\"gitbook/gitbook-plugin-lunr/search-lunr.js\\"></script>
+        
+    
+        
+        <script src=\\"gitbook/gitbook-plugin-fontsettings/fontsettings.js\\"></script>
+        
+    
+
+    </body>
+</html>
+
+",
+  "filePath": "encoding.html",
+  "stats": Object {
+    "isDirectory": false,
+    "isFile": true,
+    "isSocket": false,
+    "isSymbolicLink": false,
+  },
+}
+`;
+
 exports[`HonKit snapshots: faq.html 1`] = `
 Object {
   "contents": "
@@ -1652,7 +2594,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>FAQ · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -1717,7 +2658,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -2238,6 +3179,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -2373,6 +3334,50 @@ In some case, HonKit cannot detect the changes of plugins.</p>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -2418,7 +3423,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>About this documentation · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -2481,7 +3485,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -3002,6 +4006,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -3111,6 +4135,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -3156,7 +4224,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Multi-Lingual · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -3221,7 +4288,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -3742,6 +4809,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -3790,9 +4877,9 @@ Object {
 <p>HonKit supports building books written in multiple languages. Each language should be a sub-directory following the normal HonKit format, and a file named <code>LANGS.md</code> should be present at the root of the repository with the following format:</p>
 <pre><code class=\\"lang-markdown\\"><span class=\\"hljs-section\\"># Languages</span>
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">English</span>](<span class=\\"hljs-link\\">en/</span>)
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">French</span>](<span class=\\"hljs-link\\">fr/</span>)
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Espa&#xF1;ol</span>](<span class=\\"hljs-link\\">es/</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">English</span>](<span class=\\"hljs-link\\">en/</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">French</span>](<span class=\\"hljs-link\\">fr/</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Español</span>](<span class=\\"hljs-link\\">es/</span>)
 </code></pre>
 <h3 id=\\"configuration-for-each-language\\">Configuration for each language</h3>
 <p>When a language book (ex: <code>en</code>) has a <code>book.json</code>, its configuration will extend the main configuration.</p>
@@ -3856,6 +4943,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -3901,7 +5032,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Glossary · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -3966,7 +5096,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -4487,6 +5617,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -4600,6 +5750,50 @@ and all other kinds of inline markup ...
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -4645,7 +5839,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Pages and Summary · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -4710,7 +5903,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -5231,6 +6424,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -5283,12 +6496,12 @@ Object {
 <h5 id=\\"simple-example\\">Simple example</h5>
 <pre><code class=\\"lang-markdown\\"><span class=\\"hljs-section\\"># Summary</span>
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Part I</span>](<span class=\\"hljs-link\\">part1/README.md</span>)
-<span class=\\"hljs-code\\">    * [Writing is nice](part1/writing.md)</span>
-<span class=\\"hljs-code\\">    * [HonKit is nice](part1/honkit.md)</span>
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Part II</span>](<span class=\\"hljs-link\\">part2/README.md</span>)
-<span class=\\"hljs-code\\">    * [We love feedback](part2/feedback_please.md)</span>
-<span class=\\"hljs-code\\">    * [Better tools for authors](part2/better_tools.md)</span>
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Part I</span>](<span class=\\"hljs-link\\">part1/README.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">Writing is nice</span>](<span class=\\"hljs-link\\">part1/writing.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">HonKit is nice</span>](<span class=\\"hljs-link\\">part1/honkit.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Part II</span>](<span class=\\"hljs-link\\">part2/README.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">We love feedback</span>](<span class=\\"hljs-link\\">part2/feedback_please.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">Better tools for authors</span>](<span class=\\"hljs-link\\">part2/better_tools.md</span>)
 </code></pre>
 <p>Each chapter has a dedicated page (<code>part#/README.md</code>) and is split into subchapters.</p>
 <h5 id=\\"anchors\\">Anchors</h5>
@@ -5297,12 +6510,12 @@ Object {
 
 <span class=\\"hljs-section\\">### Part I</span>
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Part I</span>](<span class=\\"hljs-link\\">part1/README.md</span>)
-<span class=\\"hljs-code\\">    * [Writing is nice](part1/README.md#writing)</span>
-<span class=\\"hljs-code\\">    * [HonKit is nice](part1/README.md#honkit)</span>
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Part II</span>](<span class=\\"hljs-link\\">part2/README.md</span>)
-<span class=\\"hljs-code\\">    * [We love feedback](part2/README.md#feedback)</span>
-<span class=\\"hljs-code\\">    * [Better tools for authors](part2/README.md#tools)</span>
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Part I</span>](<span class=\\"hljs-link\\">part1/README.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">Writing is nice</span>](<span class=\\"hljs-link\\">part1/README.md#writing</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">HonKit is nice</span>](<span class=\\"hljs-link\\">part1/README.md#honkit</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Part II</span>](<span class=\\"hljs-link\\">part2/README.md</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">We love feedback</span>](<span class=\\"hljs-link\\">part2/README.md#feedback</span>)
+<span class=\\"hljs-bullet\\">    *</span> [<span class=\\"hljs-string\\">Better tools for authors</span>](<span class=\\"hljs-link\\">part2/README.md#tools</span>)
 </code></pre>
 <h5 id=\\"parts\\">Parts</h5>
 <p>The Table of Contents can be divided into parts separated by headings or horizontal lines:</p>
@@ -5310,17 +6523,17 @@ Object {
 
 <span class=\\"hljs-section\\">### Part I</span>
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Writing is nice</span>](<span class=\\"hljs-link\\">part1/writing.md</span>)
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">HonKit is nice</span>](<span class=\\"hljs-link\\">part1/honkit.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Writing is nice</span>](<span class=\\"hljs-link\\">part1/writing.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">HonKit is nice</span>](<span class=\\"hljs-link\\">part1/honkit.md</span>)
 
 <span class=\\"hljs-section\\">### Part II</span>
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">We love feedback</span>](<span class=\\"hljs-link\\">part2/feedback_please.md</span>)
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Better tools for authors</span>](<span class=\\"hljs-link\\">part2/better_tools.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">We love feedback</span>](<span class=\\"hljs-link\\">part2/feedback_please.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Better tools for authors</span>](<span class=\\"hljs-link\\">part2/better_tools.md</span>)
 
 ----
 
-<span class=\\"hljs-bullet\\">* </span>[<span class=\\"hljs-string\\">Last part without title</span>](<span class=\\"hljs-link\\">part3/title.md</span>)
+<span class=\\"hljs-bullet\\">*</span> [<span class=\\"hljs-string\\">Last part without title</span>](<span class=\\"hljs-link\\">part3/title.md</span>)
 </code></pre>
 <p>Parts are just groups of chapters and do not have dedicated pages, but according to the theme, it will show in the navigation.</p>
 <h3 id=\\"pages\\">Pages</h3>
@@ -5342,11 +6555,11 @@ Markdown will dictates <span class=\\"hljs-emphasis\\">_most_</span> of your <sp
 <h4 id=\\"front-matter\\">Front Matter</h4>
 <p>Pages can contain an optional front matter. It can be used to define the page&apos;s description. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines. Here is a basic example:</p>
 <pre><code class=\\"lang-yaml\\"><span class=\\"hljs-meta\\">---</span>
-<span class=\\"hljs-attr\\">description:</span> This is a short description of my page
-<span class=\\"hljs-meta\\">---</span>
-
+<span class=\\"hljs-attr\\">description:</span> <span class=\\"hljs-string\\">This</span> <span class=\\"hljs-string\\">is</span> <span class=\\"hljs-string\\">a</span> <span class=\\"hljs-string\\">short</span> <span class=\\"hljs-string\\">description</span> <span class=\\"hljs-string\\">of</span> <span class=\\"hljs-string\\">my</span> <span class=\\"hljs-string\\">page</span>
+<span class=\\"hljs-meta\\">---
+</span>
 <span class=\\"hljs-comment\\"># The content of my page</span>
-...
+<span class=\\"hljs-string\\">...</span>
 </code></pre>
 <p>The front matter can define variables of your own, they will be added to the <a href=\\"templating/variables.html\\">page variable</a> so you can use them in your templating.</p>
 
@@ -5408,6 +6621,50 @@ Markdown will dictates <span class=\\"hljs-emphasis\\">_most_</span> of your <sp
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -5453,7 +6710,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>API & Context · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -5518,7 +6774,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -6039,6 +7295,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -6154,9 +7430,9 @@ page.type (<span class=\\"hljs-string\\">&apos;markdown&apos;</span> or <span cl
     <span class=\\"hljs-string\\">&quot;book&quot;</span> &lt;Book&gt;,
 
     <span class=\\"hljs-comment\\">// Output instance</span>
-    <span class=\\"hljs-string\\">&quot;output&quot;</span>: <span class=\\"xml\\"><span class=\\"hljs-tag\\">&lt;<span class=\\"hljs-name\\">Output</span>&gt;</span>
+    <span class=\\"hljs-string\\">&quot;output&quot;</span>: &lt;Output&gt;
 }
-</span></code></pre>
+</code></pre>
 <p>For example a filter or block function can access the current book using: <code>this.book</code>.</p>
 <h4 id=\\"context-for-hooks\\">Context for Hooks</h4>
 <p>Hooks only have access to the <code>&lt;Book&gt;</code> instance using <code>this.book</code>.</p>
@@ -6219,6 +7495,50 @@ page.type (<span class=\\"hljs-string\\">&apos;markdown&apos;</span> or <span cl
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -6264,7 +7584,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Blocks · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -6329,7 +7648,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -6850,6 +8169,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -6995,6 +8334,50 @@ This is the body of the block.
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -7040,7 +8423,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Create a plugin · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -7105,7 +8487,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -7626,6 +9008,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -7707,13 +9109,13 @@ Object {
 <p>The <code>index.js</code> is main entry point of your plugin runtime:</p>
 <pre><code class=\\"lang-js\\"><span class=\\"hljs-built_in\\">module</span>.exports = {
     <span class=\\"hljs-comment\\">// Map of hooks</span>
-    hooks: {},
+    <span class=\\"hljs-attr\\">hooks</span>: {},
 
     <span class=\\"hljs-comment\\">// Map of new blocks</span>
-    blocks: {},
+    <span class=\\"hljs-attr\\">blocks</span>: {},
 
     <span class=\\"hljs-comment\\">// Map of new filters</span>
-    filters: {}
+    <span class=\\"hljs-attr\\">filters</span>: {}
 };
 </code></pre>
 <h2 id=\\"publish-your-plugin\\">Publish your plugin</h2>
@@ -7786,6 +9188,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -7831,7 +9277,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Filters · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -7896,7 +9341,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -8417,6 +9862,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -8556,6 +10021,50 @@ Refer to <a href=\\"api.html\\">Context and APIs</a> to learn more about <code>t
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -8601,7 +10110,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Hooks · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -8666,7 +10174,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -9187,6 +10695,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -9396,6 +10924,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -9441,7 +11013,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Plugins · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -9506,7 +11077,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -10027,6 +11598,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -10143,6 +11734,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -10188,7 +11823,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Test your plugin · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -10253,7 +11887,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -10774,6 +12408,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -10886,6 +12540,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -10931,7 +12629,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Installation and Setup · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -10996,7 +12693,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -11517,6 +13214,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -11575,7 +13292,7 @@ Object {
 <pre><code>$ npm install honkit --save-dev
 # or
 $ yarn add honkit --dev
-</code></pre><p>&#x26A0;&#xFE0F; Warning:</p>
+</code></pre><p>⚠️ Warning:</p>
 <ul>
 <li>If you have installed <code>honkit</code> globally(<code>--global</code>) you must install each plugins rule globally(<code>--global</code>) as well</li>
 <li>If you have installed <code>honkit</code> locally you must install each plugins locally as well</li>
@@ -11662,6 +13379,50 @@ npm run serve
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -11707,7 +13468,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Directory structure · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -11772,7 +13532,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -12293,6 +14053,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"encoding.html\\">
+            
+                <a href=\\"encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -12341,15 +14121,15 @@ Object {
 <p>HonKit uses a simple directory structure. All Markdown/Asciidoc files listed in the <a href=\\"pages.html\\">SUMMARY</a> will be transformed as HTML. Multi-Lingual books have a slightly <a href=\\"languages.html\\">different structure</a>.</p>
 <p>A basic HonKit usually looks something like this:</p>
 <pre><code>.
-&#x251C;&#x2500;&#x2500; book.json
-&#x251C;&#x2500;&#x2500; README.md
-&#x251C;&#x2500;&#x2500; SUMMARY.md
-&#x251C;&#x2500;&#x2500; chapter-1/
-|   &#x251C;&#x2500;&#x2500; README.md
-|   &#x2514;&#x2500;&#x2500; something.md
-&#x2514;&#x2500;&#x2500; chapter-2/
-    &#x251C;&#x2500;&#x2500; README.md
-    &#x2514;&#x2500;&#x2500; something.md
+├── book.json
+├── README.md
+├── SUMMARY.md
+├── chapter-1/
+|   ├── README.md
+|   └── something.md
+└── chapter-2/
+    ├── README.md
+    └── something.md
 </code></pre><p>An overview of what each of these does:</p>
 <table>
 <thead>
@@ -12392,10 +14172,10 @@ bin/*
 </code></pre><h3 id=\\"subdirectory\\">Project integration with subdirectory </h3>
 <p>For software projects, you can use a subdirectory (like <code>docs/</code>) to store the book for the project&apos;s documentation. You can configure the <a href=\\"config.html\\"><code>root</code> option</a> to indicate the folder where HonKit can find the book&apos;s files:</p>
 <pre><code>.
-&#x251C;&#x2500;&#x2500; book.json
-&#x2514;&#x2500;&#x2500; docs/
-    &#x251C;&#x2500;&#x2500; README.md
-    &#x2514;&#x2500;&#x2500; SUMMARY.md
+├── book.json
+└── docs/
+    ├── README.md
+    └── SUMMARY.md
 </code></pre><p>With <code>book.json</code> containing:</p>
 <pre><code>{
     &quot;root&quot;: &quot;./docs&quot;
@@ -12459,6 +14239,50 @@ bin/*
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"gitbook/gitbook.js\\"></script>
     <script src=\\"gitbook/theme.js\\"></script>
     
@@ -12504,7 +14328,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>AsciiDoc · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -12569,7 +14392,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -13090,6 +14913,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -13238,6 +15081,50 @@ but now stands for &quot;PHP: Hypertext Preprocessor&quot;).
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -13283,7 +15170,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Markdown · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -13348,7 +15234,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -13869,6 +15755,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -13915,12 +15821,12 @@ Object {
 
                                 <h1 id=\\"markdown\\">Markdown</h1>
 <p>Most of the examples from this documentation are in Markdown. Markdown is default parser for HonKit, but one can also opt for the <a href=\\"asciidoc.html\\">AsciiDoc syntax</a>.</p>
-<p>Here&#x2019;s an overview of Markdown syntax that you can use with HonKit (same as GitHub with some additions).</p>
+<p>Here’s an overview of Markdown syntax that you can use with HonKit (same as GitHub with some additions).</p>
 <h3 id=\\"headings\\">Headings</h3>
 <p>To create a heading, add one to six <code>#</code> symbols before your heading text. The number of # you use will determine the size of the heading.</p>
-<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-section\\"># This is an &lt;h1&gt; tag</span>
-<span class=\\"hljs-section\\">## This is an &lt;h2&gt; tag</span>
-<span class=\\"hljs-section\\">###### This is an &lt;h6&gt; tag</span>
+<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-section\\"># This is an <span class=\\"xml\\"><span class=\\"hljs-tag\\">&lt;<span class=\\"hljs-name\\">h1</span>&gt;</span></span> tag</span>
+<span class=\\"hljs-section\\">## This is an <span class=\\"xml\\"><span class=\\"hljs-tag\\">&lt;<span class=\\"hljs-name\\">h2</span>&gt;</span></span> tag</span>
+<span class=\\"hljs-section\\">###### This is an <span class=\\"xml\\"><span class=\\"hljs-tag\\">&lt;<span class=\\"hljs-name\\">h6</span>&gt;</span></span> tag</span>
 </code></pre>
 <p>HonKit supports a nice way for explicitly setting the header ID. If you follow the header text with an opening curly bracket (separated from the text with a least one space), a hash, the ID and a closing curly bracket, the ID is set on the header. If you use the trailing hash feature of atx style headers, the header ID has to go after the trailing hashes. For example:</p>
 <pre><code class=\\"lang-markdown\\"><span class=\\"hljs-section\\">Hello {#id}
@@ -13931,7 +15837,7 @@ Object {
 <span class=\\"hljs-section\\"># Hello # {#id}</span>
 </code></pre>
 <h3 id=\\"paragraphs\\">Paragraphs and Line Breaks </h3>
-<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line &#x2014; a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs.</p>
+<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines. (A blank line is any line that looks like a blank line — a line containing nothing but spaces or tabs is considered blank.) Normal paragraphs should not be indented with spaces or tabs.</p>
 <pre><code>Here&apos;s a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
@@ -13944,24 +15850,24 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 
 ~~This text will be crossed out.~~
 
-<span class=\\"hljs-emphasis\\">_You **can** combine them_</span>
+<span class=\\"hljs-emphasis\\">_You <span class=\\"hljs-strong\\">**can**</span> combine them_</span>
 </code></pre>
 <h3 id=\\"lists\\">Lists </h3>
 <p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
 <h5 id=\\"unordered\\">Unordered</h5>
-<p>Unordered lists use asterisks, pluses, and hyphens &#x2014; interchangably &#x2014; as list markers:</p>
-<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-bullet\\">* </span>Item 1
-<span class=\\"hljs-bullet\\">* </span>Item 2
-  * Item 2a
-  * Item 2b
+<p>Unordered lists use asterisks, pluses, and hyphens — interchangably — as list markers:</p>
+<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-bullet\\">*</span> Item 1
+<span class=\\"hljs-bullet\\">*</span> Item 2
+<span class=\\"hljs-bullet\\">  *</span> Item 2a
+<span class=\\"hljs-bullet\\">  *</span> Item 2b
 </code></pre>
 <h5 id=\\"ordered\\">Ordered</h5>
 <p>Ordered lists use numbers followed by periods:</p>
-<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-bullet\\">1. </span>Item 1
-<span class=\\"hljs-bullet\\">2. </span>Item 2
-<span class=\\"hljs-bullet\\">3. </span>Item 3
-   * Item 3a
-   * Item 3b
+<pre><code class=\\"lang-markdown\\"><span class=\\"hljs-bullet\\">1.</span> Item 1
+<span class=\\"hljs-bullet\\">2.</span> Item 2
+<span class=\\"hljs-bullet\\">3.</span> Item 3
+<span class=\\"hljs-bullet\\">   *</span> Item 3a
+<span class=\\"hljs-bullet\\">   *</span> Item 3b
 </code></pre>
 <h3 id=\\"links\\">Links </h3>
 <p>Markdown supports two style of links: inline and reference.</p>
@@ -13998,11 +15904,11 @@ This line is separated from the one above by two newlines, so it will be a *sepa
 </code></pre>
 <p>The pipes on either end of the table are optional. Cells can vary in width and do not need to be perfectly aligned within columns. There must be at least three hyphens in each column of the header row.</p>
 <h3 id=\\"code\\">Code </h3>
-<p>Markdown supports two different code block styles. One uses lines indented with either four spaces or one tab whereas the other uses lines with tilde characters as delimiters &#x2013; therefore the content does not need to be indented:</p>
+<p>Markdown supports two different code block styles. One uses lines indented with either four spaces or one tab whereas the other uses lines with tilde characters as delimiters – therefore the content does not need to be indented:</p>
 <pre><code class=\\"lang-markdown\\">This is a sample code block.
 
-<span class=\\"hljs-code\\">    Continued here.</span>
-</code></pre>
+<span class=\\"hljs-code\\">    Continued here.
+</span></code></pre>
 <h5 id=\\"fenced-code-blocks\\">Fenced code blocks</h5>
 <p>You can create fenced code blocks by placing triple backticks <code>\`\`\` </code> before and after the code block. We recommend placing a blank line before and after code blocks to make the raw formatting easier to read.</p>
 <pre><code>\`\`\`
@@ -14041,10 +15947,10 @@ Markdown here will not be **parsed**
 
 Hyphens
 
-<span class=\\"hljs-emphasis\\">***</span>
+<span class=\\"hljs-strong\\">**<span class=\\"hljs-emphasis\\">*
 
 Asterisks
-</code></pre>
+</span></span></code></pre>
 <h3 id=\\"ignoring-markdown-formatting\\">Ignoring Markdown formatting</h3>
 <p>You can tell HonKit to ignore (or escape) Markdown formatting by using <code>\\\\</code> before the Markdown character.</p>
 <pre><code>Let&apos;s rename \\\\*our-new-project\\\\* to \\\\*our-old-project\\\\*.
@@ -14107,6 +16013,50 @@ Asterisks
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -14152,7 +16102,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Builtin · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -14217,7 +16166,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -14738,6 +16687,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -14852,6 +16821,50 @@ Render inline asciidoc</p>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -14897,7 +16910,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Content References · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -14962,7 +16974,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -15483,6 +17495,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -15614,6 +17646,50 @@ This is the default content
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -15659,7 +17735,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Templating · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -15724,7 +17799,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -16245,6 +18320,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -16297,14 +18392,14 @@ Object {
 <pre><code class=\\"lang-twig\\"><span class=\\"xml\\">My name is </span><span class=\\"hljs-template-variable\\">{{ name }}</span><span class=\\"xml\\">, nice to meet you
 </span></code></pre>
 <p>This looks up username from the context and displays it. Variable names can have dots in them which lookup properties, just like JavaScript. You can also use the square bracket syntax.</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-variable\\">{{ foo.bar }}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-variable\\">{{ foo.bar }}</span><span class=\\"xml\\">
 </span><span class=\\"hljs-template-variable\\">{{ foo[&quot;bar&quot;] }}</span><span class=\\"xml\\">
 </span></code></pre>
 <p>If a value is undefined, nothing is displayed. The following all output nothing if foo is undefined: <code>{{ foo }}</code>, <code>{{ foo.bar }}</code>, <code>{{ foo.bar.baz }}</code>.</p>
 <p>HonKit provides a set of <a href=\\"variables.html\\">predefined  variables</a> from the context.</p>
 <h3 id=\\"filters\\">Filters</h3>
 <p>Filters are essentially functions that can be applied to variables. They are called with a pipe operator (<code>|</code>) and can take arguments.</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-variable\\">{{ foo | title }}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-variable\\">{{ foo | title }}</span><span class=\\"xml\\">
 </span><span class=\\"hljs-template-variable\\">{{ foo | join(&quot;,&quot;) }}</span><span class=\\"xml\\">
 </span><span class=\\"hljs-template-variable\\">{{ foo | replace(&quot;foo&quot;, &quot;bar&quot;) | capitalize }}</span><span class=\\"xml\\">
 </span></code></pre>
@@ -16312,13 +18407,13 @@ Object {
 <h3 id=\\"tags\\">Tags</h3>
 <h5 id=\\"if\\">if</h5>
 <p><code>if</code> tests a condition and lets you selectively display content. It behaves exactly as JavaScript&apos;s <code>if</code> behaves.</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">if</span></span> variable %}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">if</span></span> variable %}</span><span class=\\"xml\\">
   It is true
 </span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">endif</span></span> %}</span><span class=\\"xml\\">
 </span></code></pre>
 <p>If variable is defined and evaluates to true, &quot;It is true&quot; will be displayed. Otherwise, nothing will be.</p>
 <p>You can specify alternate conditions with <code>elif</code> and <code>else</code>:</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">if</span></span> hungry %}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">if</span></span> hungry %}</span><span class=\\"xml\\">
   I am hungry
 </span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\">elif</span> tired %}</span><span class=\\"xml\\">
   I am tired
@@ -16336,7 +18431,7 @@ Object {
 </span></code></pre>
 <h5 id=\\"set\\">set</h5>
 <p><code>set</code> lets you create/modify a variable.</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">set</span></span> softwareVersion = &quot;1.0.0&quot; %}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\"><span class=\\"hljs-keyword\\">set</span></span> softwareVersion = &quot;1.0.0&quot; %}</span><span class=\\"xml\\">
 
 Current version is </span><span class=\\"hljs-template-variable\\">{{ softwareVersion }}</span><span class=\\"xml\\">.
 [Download it](website.com/download/</span><span class=\\"hljs-template-variable\\">{{ softwareVersion }}</span><span class=\\"xml\\">)
@@ -16345,7 +18440,7 @@ Current version is </span><span class=\\"hljs-template-variable\\">{{ softwareVe
 <p>Inclusion and inheritance is detailled in the <a href=\\"conrefs.html\\">Content References</a> section.</p>
 <h3 id=\\"escaping\\">Escaping</h3>
 <p>If you want HonKit to ignore any of the special templating tags, you can use raw and anything inside of it will be output as plain text.</p>
-<pre><code class=\\"lang-twig\\"><span class=\\"xml\\"></span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\">raw</span> %}</span><span class=\\"xml\\">
+<pre><code class=\\"lang-twig\\"><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\">raw</span> %}</span><span class=\\"xml\\">
   this will </span><span class=\\"hljs-template-variable\\">{{ not be processed }}</span><span class=\\"xml\\">
 </span><span class=\\"hljs-template-tag\\">{% <span class=\\"hljs-name\\">endraw</span> %}</span><span class=\\"xml\\">
 </span></code></pre>
@@ -16408,6 +18503,50 @@ Current version is </span><span class=\\"hljs-template-variable\\">{{ softwareVe
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -16453,7 +18592,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Variables · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -16518,7 +18656,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -17039,6 +19177,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -17366,6 +19524,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     
@@ -17411,7 +19613,6 @@ Object {
 <html lang=\\"\\" >
     <head>
         <meta charset=\\"UTF-8\\">
-        <meta content=\\"text/html; charset=utf-8\\" http-equiv=\\"Content-Type\\">
         <title>Theming · HonKit Documentation</title>
         <meta http-equiv=\\"X-UA-Compatible\\" content=\\"IE=edge\\" />
         <meta name=\\"description\\" content=\\"\\">
@@ -17476,7 +19677,7 @@ Object {
     </head>
     <body>
         
-<div class=\\"book\\">
+<div class=\\"book honkit-cloak\\">
     <div class=\\"book-summary\\">
         
             
@@ -17997,6 +20198,26 @@ Object {
     
 
     
+        
+        <li class=\\"divider\\"></li>
+        
+        
+    
+        <li class=\\"chapter \\" data-level=\\"5.1\\" data-path=\\"../encoding.html\\">
+            
+                <a href=\\"../encoding.html\\">
+            
+                    
+                    Encoding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
 
     <li class=\\"divider\\"></li>
 
@@ -18143,6 +20364,50 @@ Object {
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = \\"\\";
+            var key = baseKey + \\":sidebar\\";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia(\\"(max-width: 600px)\\").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(\\".book\\");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add(\\"without-animation\\", \\"with-summary\\");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(\\".book\\");
+            book.classList.remove(\\"honkit-cloak\\");
+        }
+    </script>
     <script src=\\"../gitbook/gitbook.js\\"></script>
     <script src=\\"../gitbook/theme.js\\"></script>
     

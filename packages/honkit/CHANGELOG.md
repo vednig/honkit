@@ -3,6 +3,104 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.6.16 (2020-12-15)
+
+**Note:** Version bump only for package honkit
+
+
+
+
+
+## 3.6.15 (2020-12-05)
+
+**Note:** Version bump only for package honkit
+
+
+
+
+
+## 3.6.14 (2020-11-29)
+
+**Note:** Version bump only for package honkit
+
+
+
+
+
+## 3.6.13 (2020-11-17)
+
+
+### Bug Fixes
+
+* **honkit:** browser print layout in default theme ([#159](https://github.com/honkit/honkit/issues/159)) ([672cb9c](https://github.com/honkit/honkit/commit/672cb9c92f90dd154793b7a36d4dbf2654e7aec4))
+
+
+
+
+
+## 3.6.12 (2020-11-13)
+
+**Note:** Version bump only for package honkit
+
+
+
+
+
+## [3.6.11](https://github.com/honkit/honkit/compare/v3.6.10...v3.6.11) (2020-11-10)
+
+**Note:** Version bump only for package honkit
+
+
+
+
+
+## [3.6.10](https://github.com/honkit/honkit/compare/v3.6.8...v3.6.10) (2020-11-10)
+
+
+### Bug Fixes
+
+* **honkit/theme-default:** fix first scroll position ([4fb9cd3](https://github.com/honkit/honkit/commit/4fb9cd361d0ae3b40394b632050d77f248ca051d))
+* **theme-default:** add .honkit-cloak ([77feada](https://github.com/honkit/honkit/commit/77feada7106e73a120e5ebd8c23f8546812fff9d))
+* **theme-default:** fix blank page on mobile ([6401745](https://github.com/honkit/honkit/commit/64017459d94a6ebf04635b5f1b544bc939014e21))
+
+
+
+
+
+## [3.6.9](https://github.com/honkit/honkit/compare/v3.6.8...v3.6.9) (2020-11-10)
+
+
+### Bug Fixes
+
+* **honkit/theme-default:** fix first scroll position ([4fb9cd3](https://github.com/honkit/honkit/commit/4fb9cd361d0ae3b40394b632050d77f248ca051d))
+* **theme-default:** add .honkit-cloak ([77feada](https://github.com/honkit/honkit/commit/77feada7106e73a120e5ebd8c23f8546812fff9d))
+
+
+
+
+
+## [3.6.8](https://github.com/honkit/honkit/compare/v3.6.6...v3.6.8) (2020-10-22)
+
+
+### Bug Fixes
+
+* **honkit:** call "page" and "page:before" if honkit has the cache ([3742225](https://github.com/honkit/honkit/commit/374222514c41d6164ca1c1804f4c18169c466daa))
+
+
+
+
+
+## [3.6.7](https://github.com/honkit/honkit/compare/v3.6.6...v3.6.7) (2020-10-22)
+
+
+### Bug Fixes
+
+* **honkit:** call "page" and "page:before" if honkit has the cache ([3742225](https://github.com/honkit/honkit/commit/374222514c41d6164ca1c1804f4c18169c466daa))
+
+
+
+
+
 ## [3.6.6](https://github.com/honkit/honkit/compare/v3.6.5...v3.6.6) (2020-09-05)
 
 **Note:** Version bump only for package honkit

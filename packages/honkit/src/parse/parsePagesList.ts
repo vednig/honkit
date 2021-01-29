@@ -8,7 +8,7 @@ import parsePage from "./parsePage";
  Parse a page from a path
 
  @param {Book} book
- @param {String} filePath
+ @param {string} filePath
  @return {Page?}
  */
 function parseFilePage(book, filePath) {
@@ -18,7 +18,6 @@ function parseFilePage(book, filePath) {
         .statFile(filePath)
         .then(
             (file) => {
-                // @ts-expect-error ts-migrate(2339) FIXME: Property 'createForFile' does not exist on type 'C... Remove this comment to see the full error message
                 const page = Page.createForFile(file);
                 return parsePage(book, page);
             },

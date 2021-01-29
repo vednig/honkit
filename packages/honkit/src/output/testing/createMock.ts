@@ -19,9 +19,8 @@ import preparePlugins from "../preparePlugins";
 function createMockOutput(generator, files, options) {
     const fs = createMockFS(files);
 
-    // @ts-expect-error ts-migrate(2339) FIXME: Property 'createForFS' does not exist on type 'Cla... Remove this comment to see the full error message
     let book = Book.createForFS(fs);
-    const state = generator.State ? generator.State({}) : Immutable.Map();
+    const state = generator.State ? new generator.State({}) : Immutable.Map();
 
     book = book.setLogLevel("disabled");
     options = generator.Options(options);

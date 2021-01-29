@@ -14,7 +14,7 @@ import indexArticleLevels from "./indexArticleLevels";
  */
 
 function insertArticle(summary, article, level) {
-    article = SummaryArticle(article);
+    article = new SummaryArticle(article);
     level = is.string(level) ? level : level.getLevel();
 
     let parent = summary.getParent(level);
@@ -39,8 +39,8 @@ function insertArticle(summary, article, level) {
 }
 
 /**
- @param {String}
- @return {Number} The index of this level within its parent's children
+ @param {string}
+ @return {number} The index of this level within its parent's children
  */
 function getLeafIndex(level) {
     const arr = level.split(".").map((char) => {

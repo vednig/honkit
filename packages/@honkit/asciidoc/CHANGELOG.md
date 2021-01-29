@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.6.16 (2020-12-15)
+
+**Note:** Version bump only for package @honkit/asciidoc
+
+
+
+
+
+## 3.6.15 (2020-12-05)
+
+**Note:** Version bump only for package @honkit/asciidoc
+
+
+
+
+
+## 3.6.14 (2020-11-29)
+
+**Note:** Version bump only for package @honkit/asciidoc
+
+
+
+
+
+## 3.6.13 (2020-11-17)
+
+
+### Bug Fixes
+
+* **honkit:** browser print layout in default theme ([#159](https://github.com/honkit/honkit/issues/159)) ([672cb9c](https://github.com/honkit/honkit/commit/672cb9c92f90dd154793b7a36d4dbf2654e7aec4))
+
+
+
+
+
+## 3.6.12 (2020-11-13)
+
+**Note:** Version bump only for package @honkit/asciidoc
+
+
+
+
+
 ## [3.5.5](https://github.com/honkit/honkit/compare/v3.5.4...v3.5.5) (2020-08-02)
 
 **Note:** Version bump only for package @honkit/asciidoc

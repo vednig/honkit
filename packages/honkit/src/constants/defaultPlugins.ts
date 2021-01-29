@@ -5,11 +5,10 @@ const pkg = require("../../package.json");
 
 /**
  * Create a PluginDependency from a dependency of gitbook
- * @param {String} pluginName
+ * @param {string} pluginName
  * @return {PluginDependency}
  */
 function createFromDependency(pluginName) {
-    // @ts-expect-error ts-migrate(2339) FIXME: Property 'nameToNpmID' does not exist on type 'Cla... Remove this comment to see the full error message
     const npmID = PluginDependency.nameToNpmID(pluginName);
     const version = pkg.dependencies[npmID];
 

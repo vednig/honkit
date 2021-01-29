@@ -13,7 +13,7 @@ function defaultHandleResult(output, result) {
 /**
  Call a "global" hook for an output
 
- @param {String} name
+ @param {string} name
  @param {Function(Output) -> Mixed} getArgument
  @param {Function(Output, result) -> Output} handleResult
  @param {Output} output
@@ -26,7 +26,6 @@ function callHook(name, getArgument, handleResult, output) {
 
     const logger = output.getLogger();
     const plugins = output.getPlugins();
-
     logger.debug.ln(`calling hook "${name}"`);
 
     // Create the JS context for plugins

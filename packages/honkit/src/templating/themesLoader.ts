@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import PathUtils from "../utils/path";
 
+// @ts-expect-error: Property 'extend' does not exist on type 'typeof Loader'.
 const ThemesLoader = nunjucks.Loader.extend({
     init: function (searchPaths) {
         this.searchPaths = Immutable.List(searchPaths).map(path.normalize);
@@ -11,7 +12,7 @@ const ThemesLoader = nunjucks.Loader.extend({
 
     /**
      * Read source of a resolved filepath
-     * @param {String}
+     * @param {string}
      * @return {Object}
      */
     getSource: function (fullpath) {
@@ -47,8 +48,8 @@ const ThemesLoader = nunjucks.Loader.extend({
 
     /**
      * Get original search path containing a template
-     * @param {String} filepath
-     * @return {String} searchPath
+     * @param {string} filepath
+     * @return {string} searchPath
      */
     getSearchPath: function (filepath) {
         return this.searchPaths
@@ -62,8 +63,8 @@ const ThemesLoader = nunjucks.Loader.extend({
 
     /**
      * Get template name from a filepath
-     * @param {String} filepath
-     * @return {String} name
+     * @param {string} filepath
+     * @return {string} name
      */
     getTemplateName: function (filepath) {
         const originalSearchPath = this.getSearchPath(filepath);
@@ -73,7 +74,7 @@ const ThemesLoader = nunjucks.Loader.extend({
     /**
      * Resolve a template from a current template
      * @param {String|null} from
-     * @param {String} to
+     * @param {string} to
      * @return {String|null}
      */
     resolve: function (from, to) {

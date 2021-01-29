@@ -12,7 +12,7 @@ import Parse from "./parse";
  Read SUMMARY to created the right chapter
 
  @param {Book}
- @param {String}
+ @param {string}
  @return {Promise}
  */
 
@@ -27,7 +27,6 @@ function initBook(rootFolder) {
             .then(() => {
                 const fs = createNodeFS(rootFolder);
 
-                // @ts-expect-error ts-migrate(2339) FIXME: Property 'createForFS' does not exist on type 'Cla... Remove this comment to see the full error message
                 const book = Book.createForFS(fs);
 
                 return (
@@ -35,7 +34,6 @@ function initBook(rootFolder) {
 
                         // Setup default readme if doesn't found one
                         .fail(() => {
-                            // @ts-expect-error ts-migrate(2339) FIXME: Property 'createWithFilepath' does not exist on ty... Remove this comment to see the full error message
                             const readmeFile = File.createWithFilepath(`README${extension}`);
 
                             // @ts-expect-error ts-migrate(2339) FIXME: Property 'create' does not exist on type 'Class'.
